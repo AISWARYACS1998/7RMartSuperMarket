@@ -20,15 +20,15 @@ public class Managefootertest extends Baseclass {
 
 	@Test
 	@Parameters({ "username", "password","address","email","phone" })
-	public void manageFooterTestMethods(String username, String password) throws IOException {
+	public void manageFooterTestMethods(String username, String password,String address,String email,String phone) throws IOException {
 		Loginpage loginpage=new Loginpage(driver);
-		 loginpage.enterUsername("admin","admin");
+		 loginpage.enterUsername(username,password);
 		Homepage homepage = loginpage.clickLogin();
 		
 		managefooter = homepage.moreinfofootertext();
-		managefooter.enterEditFooter().enterAddressFooter("abcdef")
-				.enterEmailFooter("abc@gmail")
-				.enterPhoneNumber("onetwothree").enterUpdate();
+		managefooter.enterEditFooter().enterAddressFooter(address)
+				.enterEmailFooter(email)
+				.enterPhoneNumber(phone).enterUpdate();
 
 		boolean isdisplay = managefooter.assertMethod();
 		Assert.assertTrue(isdisplay, Contants.ERRORMESSAGEFORDISPLAY);

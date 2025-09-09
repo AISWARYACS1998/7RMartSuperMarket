@@ -18,18 +18,18 @@ public class ManagecontactTest extends Baseclass {
 
 	@Test
 	@Parameters({ "username", "password","phone","email","address","deliverytime","deliverylimit" })
-	public void manageContactTestMethod(String username, String password) throws IOException {
+	public void manageContactTestMethod(String username, String password,String phone,String email,String address,String deliverytime,String deliverylimit) throws IOException {
 		Loginpage loginpage=new Loginpage(driver);
-		 loginpage.enterUsername("admin","admin");
+		 loginpage.enterUsername(username,password);
 		Homepage homepage = loginpage.clickLogin();
 		
 		
 		managecontact = homepage.moreinfocontact();
-		managecontact.contactedit().updatePhoneNumber("qwertyuj")
-				.updateEmail("abcdef@gmail")
-				.updateAddress("asdfghjkl")
-				.updateDeliveryTime("ten")
-				.updateDeliveryLimit("thirty").updateStatus();
+		managecontact.contactedit().updatePhoneNumber(phone)
+				.updateEmail(email)
+				.updateAddress(address)
+				.updateDeliveryTime(deliverytime)
+				.updateDeliveryLimit(deliverylimit).updateStatus();
 
 		boolean isdisplay = managecontact.assertioncheck();
 		Assert.assertTrue(isdisplay, Contants.ERRORMESSAGEFORDISPLAY);

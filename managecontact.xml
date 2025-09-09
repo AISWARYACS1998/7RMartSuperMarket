@@ -7,6 +7,13 @@
 	<parameter name="browser" value="chrome"></parameter>
 	<parameter name="username" value="admin"></parameter>
 	<parameter name="password" value="admin"></parameter>
+	<parameter name="phone" value="tentwo"></parameter>
+	<parameter name="email" value="abcd@gmail"></parameter>
+	<parameter name="address" value="asdfghjmk"></parameter>
+	<parameter name="deliverytime" value="ten"></parameter>
+	<parameter name="deliverylimit" value="thirty"></parameter>
+	
+	
 	<test name="chrometest" thread-count="5">
 		
 		<classes>
