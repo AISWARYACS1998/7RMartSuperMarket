@@ -16,16 +16,29 @@ public class Loginpage {
 	@FindBy(xpath="//input[@placeholder='Username']")WebElement user;
 	@FindBy(xpath="//input[@placeholder='Password']")WebElement pass;
 	@FindBy(xpath="//button[text()='Sign In']")WebElement signin;
-	public void enterUsername(String username,String password)
+	@FindBy(xpath="//p[text()='Dashboard']")WebElement dashboard;
+	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alert;
+	
+	public Loginpage enterUsername(String username,String password)
 	{
 		user.sendKeys(username);
 		pass.sendKeys(password);
+		return this;
 	}
-	public void clickLogin()
+	public Homepage clickLogin()
 	{
 		//WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(10));
 		//wait.until(ExpectedConditions.elementToBeSelected(signin));
 		signin.click();
+		return new Homepage(driver);
+	}
+	public boolean IsDashboardisDisplayed()
+	{
+		return dashboard.isDisplayed();
+	}
+	public boolean isalertDisplayed()
+	{
+		return alert.isDisplayed();
 	}
 	
 

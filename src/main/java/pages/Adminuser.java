@@ -7,9 +7,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import utilities.PageUtility;
+import utilities.WaitUtility;
+
 public class Adminuser 
 {
 	public WebDriver driver;
+	PageUtility utility=new PageUtility(driver);
+	WaitUtility wait=new WaitUtility();
  	public Adminuser(WebDriver driver)
 	{
 		this.driver=driver;
@@ -17,37 +22,44 @@ public class Adminuser
 		
 	}
  
- 	@FindBy(xpath="//a[@href='https://groceryapp.uniqassosiates.com/admin/list-admin'and @class='small-box-footer']")WebElement more;
-	public void moreinfo()
-	{
-		driver.navigate().to("https://groceryapp.uniqassosiates.com/admin");
-		more.click();
-	}
+ 	
 	
-	@FindBy(xpath="//a[@onclick='click_button(1)']")WebElement add;
-	public void clicks()
+@FindBy(xpath="//a[@onclick='click_button(1)']")WebElement add;
+@FindBy(xpath="//input[@id='username']")WebElement usernames;
+@FindBy(xpath="//input[@id='password']")WebElement passwords;
+@FindBy(xpath="//select[@name='user_type']") WebElement usertype;
+@FindBy(xpath="//button[@name='Create']") WebElement save;
+
+
+	public Adminuser clicks()
 	{
-		driver.navigate().to("https://groceryapp.uniqassosiates.com/admin/list-admin");
+		//driver.navigate().to("https://groceryapp.uniqassosiates.com/admin/list-admin");
 		add.click();
+		return this;
 	}
-	@FindBy(xpath="//input[@id='username']")WebElement usernames;
-	@FindBy(xpath="//input[@id='password']")WebElement passwords;
-	public void home(String username,String password)
+
+	public Adminuser home(String username,String password)
 	{
 		usernames.sendKeys(username);
 		passwords.sendKeys(password);
+		return this;
 	}
-	@FindBy(xpath="//select[@name='user_type']") WebElement usertype;
-	public void user()
+	
+	public Adminuser user()
 	{
-		Select select=new Select(usertype);
-		select.selectByIndex(1);
-
+		utility.selectByIndex(usertype, 1);
+		return this;
 	}
-	@FindBy(xpath="//button[@name='Create']") WebElement save;
-	public void saveclick()
+	
+	public Adminuser saveclick()
 	{
 		save.click();
+		return this;
+	}
+
+	public Adminuser moreinfo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	}
