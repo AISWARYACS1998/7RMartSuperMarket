@@ -19,16 +19,16 @@ public class Managefootertest extends Baseclass {
 	Managefootertext managefooter;
 
 	@Test
-	@Parameters({ "username", "password" })
+	@Parameters({ "username", "password","address","email","phone" })
 	public void manageFooterTestMethods(String username, String password) throws IOException {
 		Loginpage loginpage=new Loginpage(driver);
 		 loginpage.enterUsername("admin","admin");
 		Homepage homepage = loginpage.clickLogin();
 		
 		managefooter = homepage.moreinfofootertext();
-		managefooter.enterEditFooter().enterAddressFooter(Excelutility.getStringData(1, 0, "managefootertest"))
-				.enterEmailFooter(Excelutility.getStringData(1, 1, "managefootertest"))
-				.enterPhoneNumber(Excelutility.getStringData(1, 2, "managefootertest")).enterUpdate();
+		managefooter.enterEditFooter().enterAddressFooter("abcdef")
+				.enterEmailFooter("abc@gmail")
+				.enterPhoneNumber("onetwothree").enterUpdate();
 
 		boolean isdisplay = managefooter.assertMethod();
 		Assert.assertTrue(isdisplay, Contants.ERRORMESSAGEFORDISPLAY);

@@ -17,7 +17,7 @@ public class ManagecontactTest extends Baseclass {
 	ManageContacts managecontact;
 
 	@Test
-	@Parameters({ "username", "password" })
+	@Parameters({ "username", "password","phone","email","address","deliverytime","deliverylimit" })
 	public void manageContactTestMethod(String username, String password) throws IOException {
 		Loginpage loginpage=new Loginpage(driver);
 		 loginpage.enterUsername("admin","admin");
@@ -25,11 +25,11 @@ public class ManagecontactTest extends Baseclass {
 		
 		
 		managecontact = homepage.moreinfocontact();
-		managecontact.contactedit().updatePhoneNumber(Excelutility.getStringData(1, 0, "ManageContacttest"))
-				.updateEmail(Excelutility.getStringData(1, 1, "ManageContacttest"))
-				.updateAddress(Excelutility.getStringData(1, 2, "ManageContacttest"))
-				.updateDeliveryTime(Excelutility.getStringData(1, 3, "ManageContacttest"))
-				.updateDeliveryLimit(Excelutility.getStringData(1, 4, "ManageContacttest")).updateStatus();
+		managecontact.contactedit().updatePhoneNumber("qwertyuj")
+				.updateEmail("abcdef@gmail")
+				.updateAddress("asdfghjkl")
+				.updateDeliveryTime("ten")
+				.updateDeliveryLimit("thirty").updateStatus();
 
 		boolean isdisplay = managecontact.assertioncheck();
 		Assert.assertTrue(isdisplay, Contants.ERRORMESSAGEFORDISPLAY);

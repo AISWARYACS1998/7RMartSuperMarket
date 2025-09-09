@@ -9,7 +9,7 @@
       <class name="testscript.Managefootertest">
         <methods>
           <include name="afterMethod"/>
-          <include name="manageFooterTestMethods" invocation-numbers="0"/>
+          <include name="manageFooterTestMethods"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- testscript.Managefootertest -->
@@ -21,7 +21,7 @@
       <class name="testscript.Managefootertest">
         <methods>
           <include name="afterMethod"/>
-          <include name="manageFooterTestMethods" invocation-numbers="0"/>
+          <include name="manageFooterTestMethods"/>
           <include name="beforeMethod"/>
         </methods>
       </class> <!-- testscript.Managefootertest -->

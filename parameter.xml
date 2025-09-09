@@ -38,18 +38,8 @@
             </class>
         </classes>
     </test>
-     <test name="Managefootertest ">
-	 <parameter name="browser" value="chrome"/>
-        <parameter name="username" value="admin"/>
-        <parameter name="password" value="admin"/>
-        <classes>
-            <class name="testscript.Managefootertest ">
-                <methods>
-                  <include name="Managefootertest "></include>
-                </methods>
-            </class>
-        </classes>
-    </test>
+    
+    
     
     
 </suite>

@@ -103,12 +103,12 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.Managefootertest" class="method navigator-link" hash-for-method="manageFooterTestMethods(admin, admin)">manageFooterTestMethods(admin, admin)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testscript.Managefootertest" class="method navigator-link" hash-for-method="manageFooterTestMethods">manageFooterTestMethods</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testscript.Managefootertest" class="method navigator-link" hash-for-method="manageFooterTestMethods(admin, admin)">manageFooterTestMethods(admin, admin)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testscript.Managefootertest" class="method navigator-link" hash-for-method="manageFooterTestMethods">manageFooterTestMethods</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -131,29 +131,25 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="manageFooterTestMethods(admin, admin)">
-                  </a> <!-- manageFooterTestMethods(admin, admin) -->
+                  <a name="manageFooterTestMethods">
+                  </a> <!-- manageFooterTestMethods -->
                   <span class="method-name">manageFooterTestMethods</span>
-                  <span class="parameters">(admin,admin)</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; because &quot;utilities.Excelutility.s&quot; is null
-	at utilities.Excelutility.getStringData(Excelutility.java:23)
-	at testscript.Managefootertest.manageFooterTestMethods(Managefootertest.java:29)
+                  <div class="stack-trace">org.testng.TestNGException: 
+Method manageFooterTestMethods requires 2 parameters but 5 were supplied in the @Test annotation.
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
+... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="manageFooterTestMethods(admin, admin)">
-                  </a> <!-- manageFooterTestMethods(admin, admin) -->
+                  <a name="manageFooterTestMethods">
+                  </a> <!-- manageFooterTestMethods -->
                   <span class="method-name">manageFooterTestMethods</span>
-                  <span class="parameters">(admin,admin)</span>
-                  <div class="stack-trace">java.lang.NullPointerException: Cannot invoke &quot;org.apache.poi.xssf.usermodel.XSSFSheet.getRow(int)&quot; because &quot;utilities.Excelutility.s&quot; is null
-	at utilities.Excelutility.getStringData(Excelutility.java:23)
-	at testscript.Managefootertest.manageFooterTestMethods(Managefootertest.java:29)
+                  <div class="stack-trace">org.testng.TestNGException: 
+Method manageFooterTestMethods requires 2 parameters but 5 were supplied in the @Test annotation.
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames
+... Removed 26 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -227,16 +223,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'manageFooterTestMethods')
 data.setCell(0, 2, 'testscript.Managefootertest')
-data.setCell(0, 3, 2316);
+data.setCell(0, 3, 0);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'manageFooterTestMethods')
 data.setCell(1, 2, 'testscript.Managefootertest')
-data.setCell(1, 3, 1324);
+data.setCell(1, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 0 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -261,36 +257,6 @@ return data;
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
-            <div class="chronological-class">
-              <div class="chronological-class-name">testscript.Managefootertest</div> <!-- chronological-class-name -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(chrome)</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">manageFooterTestMethods(admin, admin)</span>
-                <span class="method-start">3119 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=manageFooterTestMethods status=FAILURE method=Managefootertest.manageFooterTestMeth...)</span>
-                <span class="method-start">5440 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod(edge)</span>
-                <span class="method-start">5923 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">manageFooterTestMethods(admin, admin)</span>
-                <span class="method-start">40416 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=manageFooterTestMethods status=FAILURE method=Managefootertest.manageFooterTestMeth...)</span>
-                <span class="method-start">41743 ms</span>
-              </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

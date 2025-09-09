@@ -12,6 +12,8 @@
 		<classes>
 			<class name="testscript.ManageCategoryTest"></class>
 		</classes>
+		
+		
 	</test>
 	
 </suite>
